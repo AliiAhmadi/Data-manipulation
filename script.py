@@ -1,1 +1,7 @@
-print("hello this is script.py")
+import math
+
+# math.sqrt()
+
+print(.6 // .2)
+
+
