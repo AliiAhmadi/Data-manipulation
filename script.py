@@ -1,17 +1,10 @@
-from collections import defaultdict
+my_list = [1, 2, 3, 4, 5]
 
 
-test = defaultdict(list)
+result = map(lambda x: x ** 2, my_list)
 
+strings = ['foo', 'card', 'bar', 'aaaa', 'abab']
 
-words = ["ali", "ahmad", "reza", "salman"]
+strings.sort(key=lambda string: len(set(list(string))))
 
-for word in words:
-    test[word[0]].append(word)
-    
-
-print(test)
-
-# test_dict = {}
-# for word in words:
-#     test_dict[word[0]].append(word)
+print(strings)
