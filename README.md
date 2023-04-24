@@ -244,10 +244,10 @@ print(data)
 9813, 9836, 9849, 9869, 9870, 9870, 9903, 9904, 9914, 9914, 9918, 9926, 9932, 9933, 9941, 9944, 9965, 9984, 9988]
 ```
 
-## Selection sort:
+## Insertion-2 sort:
 
 ```python
-# Selection Sort
+# Insertion Sort
 
 # in any step we choose one item and move it to the currect location
 
