@@ -1,5 +1,6 @@
 from urllib.parse import parse_qs
 import random
+import itertools
 
 
 query_string = "name=ali&family=ahmadi&age=20&midName="
