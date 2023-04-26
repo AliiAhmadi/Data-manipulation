@@ -377,3 +377,39 @@ print(data)
 979048, 981474, 981741, 981884, 981928, 982586, 982811, 982852, 983131, 983162, 983354, 984243, 986614, 987982, 988114, 988227, 988453, 990071, 990271,
 991717, 991727, 992688, 992906, 992968, 993526, 994479, 995002, 995964, 996378, 997539, 997876, 999607, 999802, 999997]
 ```
+
+Get AVG of 100 repeat:
+```python
+import random
+
+
+COUNT = 100
+MAXIMUM = 100000000
+COUNT_PER_ONCE = 100
+
+def sort_change_count(data):
+    counter = 0
+    for i in range(1, len(data)):
+        temp = data[i]
+        j = i - 1
+        while j >= 0 and data[j] > temp:
+            data[j + 1], j = data[j], j - 1
+            counter += 1
+        data[j + 1] = temp
+    
+    return counter
+    
+results = []
+
+for num in range(COUNT):
+    data = [random.randrange(MAXIMUM) for i in range(COUNT_PER_ONCE)]
+    results.append(sort_change_count(data))
+
+print(sum(results) / len(results))
+```
+
+Result:
+```console
+2470.05
+```
+
