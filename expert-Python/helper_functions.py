@@ -32,4 +32,14 @@ for i in range(32):
         random_bits |= 1 << i
         
         
-print(bin(random_bits))
+# print(bin(random_bits))
+
+
+def add_numbers(x, y):
+    return x + y
+
+
+add_one = lambda y: add_numbers(1, y)
+
+
+print(add_one(12))
