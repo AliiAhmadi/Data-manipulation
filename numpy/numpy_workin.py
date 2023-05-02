@@ -114,11 +114,32 @@ printable = np.arange(32).reshape((2, 4, 4))
 
 # print(printable.transpose((1, 2, 1)))
 
-print(printable)
+# print(printable)
 
-print("=========================")
+# print("=========================")
 
-# print(printable.transpose((1, 0, 2)))
+# # print(printable.transpose((1, 0, 2)))
 
 
-print(printable.swapaxes(0, 1))
+# print(printable.swapaxes(0, 1))
+
+
+## ufuncs
+
+array = np.arange(32)
+
+# print(np.exp(array))
+
+result = np.exp2(array)
+
+# result = np.sqrt(array)
+
+# print(array)
+
+print(result)
+
+# there is some unary ufuncs
+ 
+ 
+# now lets see some binary ufuncs
+
