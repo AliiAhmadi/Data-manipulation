@@ -68,9 +68,57 @@ second_test = (names == "Bob") | (names == "Will")
 # print(second_test)
 
 
-print(data)
+# print(data)
 
-print("----------------------------")
-data[data < 0] = 0
+# print("----------------------------")
+# data[data < 0] = 0
 
-print(data)
+# print(data)
+
+emp_arr = np.empty((8, 5))
+
+# print(emp_arr)
+
+for i in range(8):
+    emp_arr[i] = i ** 3
+    
+# print(emp_arr)
+
+# print(np.array([1, 2, 3, 4, 5, 6]))
+
+# print(emp_arr)
+
+
+array = np.arange(32).reshape((8, 4))
+
+# print(array[[2], [3]])
+
+printable = array[[1, 5, 7, 2]][:, [0, 3, 1, 2]]
+
+# print(array)
+
+# print("==========================================")
+# # array[[1, 5, 7, 2]][:, [0, 3, 1, 2]]
+# print(printable)
+
+
+# printable = np.arange(32).reshape(4, 8)
+
+
+# print(printable)
+# print("==================")
+# print(printable.T)
+
+
+printable = np.arange(32).reshape((2, 4, 4))
+
+# print(printable.transpose((1, 2, 1)))
+
+print(printable)
+
+print("=========================")
+
+# print(printable.transpose((1, 0, 2)))
+
+
+print(printable.swapaxes(0, 1))
