@@ -1,10 +1,14 @@
-my_list = [1, 2, 3, 4, 5]
+n = int(input())
 
+names = []
+amounts = []
 
-result = map(lambda x: x ** 2, my_list)
+for i in range(n):
+    name, amount = input().split()
+    amount = int(amount)
+    names.append(name)
+    amounts.append(amount)
 
-strings = ['foo', 'card', 'bar', 'aaaa', 'abab']
+maximum = max(amounts)
 
-strings.sort(key=lambda string: len(set(list(string))))
-
-print(strings)
+print(names[amounts.index(maximum)])
