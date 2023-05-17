@@ -1,41 +1,37 @@
-n, m = (int(i) for i in input().split())
+import math
 
-hs = [int(i) for i in input().split()]
+def is_prime(number):
+    if number == 1:
+        return False
+    flag = 0
+    for k in range(2, int(math.sqrt(number)) + 1):
+        if number % k == 0:
+            flag = 1
+            break
+    
+    if flag == 0:
+        return True
+    return False
 
-string = input()
 
-##################
+n = int(input())
 
-# functions
+number = 10 ** (n - 1)
 
-def right_to_left():
-    for index in reversed(list(range(n))):
-        if hs[index] < max(hs[index:]):
-            hs[index] += 1
+result = []
+
+while len(str(number)) == n:
+    flag = 0
+    string = str(number)
+    for i in range(n):
+        if not is_prime(int(string[: n - i])):
+            flag = 1
+            break
         
+    
+    if flag == 0:
+        result.append(string)
+    number += 1
 
-
-def left_to_right():
-    for index in range(n):
-        result = hs[:index]
-        result.append(0)
-        if hs[index] < max(result):
-            hs[index] += 1
-
-
-
-
-
-
-####################
-
-for char in string:
-    if char == "R":
-        right_to_left()
-    else:
-        left_to_right()
-
-
-hs = [str(num) for num in hs]
-
-print(" ".join(hs))
+for i in result:
+    print(i)
