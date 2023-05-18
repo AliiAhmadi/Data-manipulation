@@ -20,14 +20,15 @@ number = 10 ** (n - 1)
 
 result = []
 
-while len(str(number)) == n:
-    flag = 0
-    string = str(number)
-    for i in range(n):
-        if not is_prime(int(string[: n - i])):
-            flag = 1
-            break
-        
+if n <= 6:
+    while len(str(number)) == n:
+        flag = 0
+        string = str(number)
+        for i in range(n):
+            if not is_prime(int(string[: n - i])):
+                flag = 1
+                break
+
     
     if flag == 0:
         result.append(string)
